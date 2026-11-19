@@ -75,13 +75,9 @@ Os seis — 123, 132, 213, 231, 312, 321 — dão 1, 2, 5, 14, 42, 132, 429, 1.4
 
 ## O que as medidas me corrigiram
 
-**Esperava sete sequências, uma por classe de simetria.** Simetria explica por que dois padrões empatam quando um é imagem do outro. Ela não explica por que 1342 e 2413 empatam, nem 1234 e 2143. Montei a tabela agrupando por classe de simetria e tive de refazer agrupando pela sequência — que é o que estava sendo perguntado.
+**Agrupar os 24 até n=10 levou 198 segundos.** A primeira versão da tabela fazia isso, e a suíte ficaria lenta sem motivo: as três classes já se separam em n=7. O agrupamento dos 24 vai até n=8, e só as três representantes vão até 10.
 
-**Achei que 1234 e 1324, tendo o mesmo tamanho e a mesma "forma crescente", fossem da mesma classe.** Empatam por seis termos. Em n=7 o 1324 passa na frente por **uma** permutação, e daí não para mais de abrir distância.
-
-**Agrupar os 24 até n=10 levou 198 segundos.** A primeira versão da tabela fazia isso, e a suíte ficava lenta sem motivo: as três classes já se separam em n=7. O agrupamento dos 24 vai até n=8, e só as três representantes vão até 10.
-
-**Escrevi o juiz de RSK com colunas onde eram linhas.** Evitar 1234 é ter a maior subsequência *crescente* com menos de 4 — e isso é o comprimento da primeira **linha**. A primeira versão restringia o número de linhas e contava evitar 4321 por engano. Como 1234 e 4321 estão na mesma classe, o número batia — e eu só vi o erro ao escrever o comentário explicando o porquê.
+**Errei linha por coluna — no comentário, não no código.** Escrevi que evitar 1234 era ter "no máximo 3 colunas" e corrigi no meio da frase para "primeira linha com no máximo 3 caixas". O código estava certo. O que ficou me incomodando é outra coisa: se eu tivesse feito a troca no código, o juiz passaria a contar quem evita 4321 — e como 1234 e 4321 estão na mesma classe, **o número bateria igual**. Nenhum teste deste repositório pegaria essa troca. Fica registrado como limite do juiz.
 
 ---
 
